@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ActiveMQ-Springboot" />
+        <module name="ActiveMQ-Spring" />
+        <module name="ActiveMQ-Springboot-Consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ActiveMQ-Spring" target="1.5" />
+      <module name="ActiveMQ-Springboot" target="11" />
+      <module name="ActiveMQ-Springboot-Consumer" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ActiveMQ-Springboot" options="-parameters" />
+      <module name="ActiveMQ-Springboot-Consumer" options="-parameters" />
+    </option>
+  </component>
+</project>

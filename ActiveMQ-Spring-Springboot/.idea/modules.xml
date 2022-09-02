@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../ActiveMQ-Spring/ActiveMQ-Spring.iml" filepath="$PROJECT_DIR$/../ActiveMQ-Spring/ActiveMQ-Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ActiveMQ-Springboot/ActiveMQ-Springboot.iml" filepath="$PROJECT_DIR$/ActiveMQ-Springboot/ActiveMQ-Springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ActiveMQ-Springboot-Consumer/ActiveMQ-Springboot-Consumer.iml" filepath="$PROJECT_DIR$/ActiveMQ-Springboot-Consumer/ActiveMQ-Springboot-Consumer.iml" />
+    </modules>
+  </component>
+</project>
