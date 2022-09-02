@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  activemq:
+    broker-url: tcp://162.14.77.50:61616
+    user: admin
+    password: admin
+  jms:
+    #指定连接的是队列(Queue)还是主题(Topic)，false代表队列,true代表主题
+    pub-sub-domain: true
+queue:
+  name: boot-queue-test
+topic:
+  name: boot-topic-test
+
+
