@@ -1,0 +1,35 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: consul-provider-payment
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver          # mysql驱动包 com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud_test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: qwe123
+  cloud:
+    consul:
+      #注册中心地址
+      host: 162.14.77.50
+      #端口
+      port: 8500
+      discovery:
+        #        hostname: 162.14.77.50
+        service-name: ${spring.application.name}
+        # 开启的心跳机制没有打开，健康检查总是报红
+        heartbeat:
+          enabled: true
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.atguigu.entities    # 所有Entity别名类所在包
+
+
+
+
+
+
+

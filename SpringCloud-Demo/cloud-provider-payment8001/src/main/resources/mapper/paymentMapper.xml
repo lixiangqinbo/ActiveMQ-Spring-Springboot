@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.dao.PaymentDao">
+    <sql id="allC">
+        id,serial
+    </sql>
+    <resultMap id="BaseResultMap" type="com.atguigu.entities.Payment">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <id column="serial" property="serial" jdbcType="VARCHAR"/>
+    </resultMap>
+<!--    public int save(Payment payment);-->
+    <insert id="save" useGeneratedKeys="true" keyProperty="id" >
+        INSERT INTO payment(serial) VALUES (#{serial})
+    </insert>
+<!--    public Payment getPaymentById(@Param("id")Long id);-->
+    <select id="getPaymentById" resultMap="BaseResultMap">
+        SELECT <include refid="allC"/> FROM payment WHERE id = ${id}
+    </select>
+</mapper>

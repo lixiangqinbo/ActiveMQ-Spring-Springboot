@@ -1,0 +1,18 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: cloud-provider-payment
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver          # mysql驱动包 com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud_test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: qwe123
+  cloud:
+    zookeeper:
+      connect-string: 162.14.77.50:2181,162.14.77.50:2182,162.14.77.50:2183
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.atguigu.entities    # 所有Entity别名类所在包
